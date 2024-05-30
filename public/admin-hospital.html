@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="../../../code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+
+    <link rel="stylesheet" href="dist/css/adminlte.min2167.css?v=3.2.0">
+
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <script
+        nonce="cd5da987-766c-4a1f-af69-bde0b64f1966">try { (function (w, d) { !function (bS, bT, bU, bV) { bS[bU] = bS[bU] || {}; bS[bU].executed = []; bS.zaraz = { deferred: [], listeners: [] }; bS.zaraz.q = []; bS.zaraz._f = function (bW) { return async function () { var bX = Array.prototype.slice.call(arguments); bS.zaraz.q.push({ m: bW, a: bX }) } }; for (const bY of ["track", "set", "debug"]) bS.zaraz[bY] = bS.zaraz._f(bY); bS.zaraz.init = () => { var bZ = bT.getElementsByTagName(bV)[0], b$ = bT.createElement(bV), ca = bT.getElementsByTagName("title")[0]; ca && (bS[bU].t = bT.getElementsByTagName("title")[0].text); bS[bU].x = Math.random(); bS[bU].w = bS.screen.width; bS[bU].h = bS.screen.height; bS[bU].j = bS.innerHeight; bS[bU].e = bS.innerWidth; bS[bU].l = bS.location.href; bS[bU].r = bT.referrer; bS[bU].k = bS.screen.colorDepth; bS[bU].n = bT.characterSet; bS[bU].o = (new Date).getTimezoneOffset(); if (bS.dataLayer) for (const ce of Object.entries(Object.entries(dataLayer).reduce(((cf, cg) => ({ ...cf[1], ...cg[1] })), {}))) zaraz.set(ce[0], ce[1], { scope: "page" }); bS[bU].q = []; for (; bS.zaraz.q.length;) { const ch = bS.zaraz.q.shift(); bS[bU].q.push(ch) } b$.defer = !0; for (const ci of [localStorage, sessionStorage]) Object.keys(ci || {}).filter((ck => ck.startsWith("_zaraz_"))).forEach((cj => { try { bS[bU]["z_" + cj.slice(7)] = JSON.parse(ci.getItem(cj)) } catch { bS[bU]["z_" + cj.slice(7)] = ci.getItem(cj) } })); b$.referrerPolicy = "origin"; b$.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(bS[bU]))); bZ.parentNode.insertBefore(b$, bZ) };["complete", "interactive"].includes(bT.readyState) ? zaraz.init() : bS.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document) } catch (e) { throw fetch("/cdn-cgi/zaraz/t"), e; };</script>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="dist/img/HealthCarelogo.jpg" alt="AdminLTELogo" height="60" width="60">
+        </div>
+
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="admin-home.html" class="nav-link">Home</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                    </div>
+                </div>
+
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search">
+                         <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+
+                        <li class="nav-item">
+                            <a href="admin-home.html" class="nav-link">
+                                <h5><i class="nav-icon fas fa-tachometer-alt"></i>Dashboard</h5>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="admin-user.html" class="nav-link">
+                                <h5><i class="nav-icon fa fa-user"></i> User</h5>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="admin-hospital.html" class="nav-link">
+                                <h5><i class="nav-icon fa fa-hospital-alt"></i> Hospital</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-doctors.html" class="nav-link">
+                                <h5><i class="nav-icon fa-solid fa-user-doctor"></i> Doctor</h5>
+                            </a>
+                        </li>
+
+
+                        <!-- extra pages -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-angle-down right"></i>
+                                <h5><i class="nav-icon fa fa-plus-circle"></i>Pages</h5>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="admin-login.html" class="nav-link">
+                                        <h5><i class=" nav-icon fa fa-right-to-bracket"></i></i>Login</h5>
+                                    </a>
+
+                                <li class="nav-item">
+                                    <a href="admin-register.html" class="nav-link">
+                                        <h5><i class="nav-icon fa fa-registered"></i> Register</h5>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="admin-changepassword.html" class="nav-link">
+                                        <h5><i class="nav-icon fa fa-lock"></i> Change Password</h5>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="admin-forgotpassword.html" class="nav-link">
+                                        <h5><i class="nav-icon fa fa-unlock"></i> Forgot Password</h5>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-appointment.html" class="nav-link">
+                                <h5><i class="nav-icon fa fa-calendar-check"></i> Appointment</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-oderds.html" class="nav-link">
+                                <h5><i class="nav-icon fa fa-cart-plus"></i> Orderds</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <h5><i class=" nav-icon fa-solid fa-right-from-bracket"></i></i> Logout</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <h5><i class="nav-icon fa fa-gear"></i> Setting</h5>
+                            </a>
+                        </li>
+
+                    </ul>
+                    </li>
+                    <!-- extra pages -->
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Hospitals</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4  col-sm-6 col-12">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div> <a href="admin-user-detail.html" class="text-white">
+                                            <img src="https://picsum.photos/80" width="65" height="65"
+                                                class="img-circle float-left mr-3" alt="Right-aligned Image">
+                                            <h5 class="text-info">Hospital 1</h5>
+                                        </a>
+                                    </div>
+                                    <h6 class="text-dark">Address</h6>
+                                    <h6 class="text-dark">Which Type Of Hospital</h6>
+                                    <a href="admin-remove.html" type="submit" class="btn btn-info float-right">Remove
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-sm-6 col-12">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div> <a href="admin-user-detail.html" class="text-white">
+                                            <img src="https://picsum.photos/80" width="65" height="65"
+                                                class="img-circle float-left mr-3" alt="Right-aligned Image">
+                                            <h5 class="text-info">Hospital 1</h5>
+                                        </a>
+                                    </div>
+                                    <h6 class="text-dark">Address</h6>
+                                    <h6 class="text-dark">Which Type Of Hospital</h6>
+                                    <a href="admin-remove.html" type="submit" class="btn btn-info float-right">Remove
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-sm-6 col-12">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div> <a href="admin-user-detail.html" class="text-white">
+                                            <img src="https://picsum.photos/80" width="65" height="65"
+                                                class="img-circle float-left mr-3" alt="Right-aligned Image">
+                                            <h5 class="text-info">Hospital 1</h5>
+                                        </a>
+                                    </div>
+                                    <h6 class="text-dark">Address</h6>
+                                    <h6 class="text-dark">Which Type Of Hospital</h6>
+                                    <a href="admin-remove.html" type="submit" class="btn btn-info float-right">Remove
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4  col-sm-6 col-12">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div> <a href="admin-user-detail.html" class="text-white">
+                                            <img src="https://picsum.photos/80" width="65" height="65"
+                                                class="img-circle float-left mr-3" alt="Right-aligned Image">
+                                            <h5 class="text-info">Hospital 1</h5>
+                                        </a>
+                                    </div>
+                                    <h6 class="text-dark">Address</h6>
+                                    <h6 class="text-dark">Which Type Of Hospital</h6>
+                                    <a href="admin-remove.html" type="submit" class="btn btn-info float-right">Remove
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-sm-6 col-12">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div> <a href="admin-user-detail.html" class="text-white">
+                                            <img src="https://picsum.photos/80" width="65" height="65"
+                                                class="img-circle float-left mr-3" alt="Right-aligned Image">
+                                            <h5 class="text-info">Hospital 1</h5>
+                                        </a>
+                                    </div>
+                                    <h6 class="text-dark">Address</h6>
+                                    <h6 class="text-dark">Which Type Of Hospital</h6>
+                                    <a href="admin-remove.html" type="submit" class="btn btn-info float-right">Remove
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-sm-6 col-12">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div> <a href="admin-user-detail.html" class="text-white">
+                                            <img src="https://picsum.photos/80" width="65" height="65"
+                                                class="img-circle float-left mr-3" alt="Right-aligned Image">
+                                            <h5 class="text-info">Hospital 1</h5>
+                                        </a>
+                                    </div>
+                                    <h6 class="text-dark">Address</h6>
+                                    <h6 class="text-dark">Which Type Of Hospital</h6>
+                                    <a href="admin-remove.html" type="submit" class="btn btn-info float-right">Remove
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2024-2025 <a href="admin-home.html">Admin Dashboard</a>.</strong>
+            All rights reserved.
+        </footer>
+
+      
+    </div>
+
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="plugins/chart.js/Chart.min.js"></script>
+
+    <script src="plugins/sparklines/sparkline.js"></script>
+
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+    <script src="dist/js/adminlte2167.js?v=3.2.0"></script>
+
+    <script src="dist/js/demo.js"></script>
+
+    <script src="dist/js/pages/dashboard.js"></script>
+
+    <script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

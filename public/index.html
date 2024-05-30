@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="../../../code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+
+  <link rel="stylesheet" href="dist/css/adminlte.min2167.css?v=3.2.0">
+
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <script
+    nonce="cd5da987-766c-4a1f-af69-bde0b64f1966">try { (function (w, d) { !function (bS, bT, bU, bV) { bS[bU] = bS[bU] || {}; bS[bU].executed = []; bS.zaraz = { deferred: [], listeners: [] }; bS.zaraz.q = []; bS.zaraz._f = function (bW) { return async function () { var bX = Array.prototype.slice.call(arguments); bS.zaraz.q.push({ m: bW, a: bX }) } }; for (const bY of ["track", "set", "debug"]) bS.zaraz[bY] = bS.zaraz._f(bY); bS.zaraz.init = () => { var bZ = bT.getElementsByTagName(bV)[0], b$ = bT.createElement(bV), ca = bT.getElementsByTagName("title")[0]; ca && (bS[bU].t = bT.getElementsByTagName("title")[0].text); bS[bU].x = Math.random(); bS[bU].w = bS.screen.width; bS[bU].h = bS.screen.height; bS[bU].j = bS.innerHeight; bS[bU].e = bS.innerWidth; bS[bU].l = bS.location.href; bS[bU].r = bT.referrer; bS[bU].k = bS.screen.colorDepth; bS[bU].n = bT.characterSet; bS[bU].o = (new Date).getTimezoneOffset(); if (bS.dataLayer) for (const ce of Object.entries(Object.entries(dataLayer).reduce(((cf, cg) => ({ ...cf[1], ...cg[1] })), {}))) zaraz.set(ce[0], ce[1], { scope: "page" }); bS[bU].q = []; for (; bS.zaraz.q.length;) { const ch = bS.zaraz.q.shift(); bS[bU].q.push(ch) } b$.defer = !0; for (const ci of [localStorage, sessionStorage]) Object.keys(ci || {}).filter((ck => ck.startsWith("_zaraz_"))).forEach((cj => { try { bS[bU]["z_" + cj.slice(7)] = JSON.parse(ci.getItem(cj)) } catch { bS[bU]["z_" + cj.slice(7)] = ci.getItem(cj) } })); b$.referrerPolicy = "origin"; b$.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(bS[bU]))); bZ.parentNode.insertBefore(b$, bZ) };["complete", "interactive"].includes(bT.readyState) ? zaraz.init() : bS.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document) } catch (e) { throw fetch("/cdn-cgi/zaraz/t"), e; };</script>
+
+
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+<script src="plugins/jquery/jquery.min.js"></script>
+
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="plugins/chart.js/Chart.min.js"></script>
+
+<script src="plugins/sparklines/sparkline.js"></script>
+
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+<script src="dist/js/adminlte2167.js?v=3.2.0"></script>
+
+<script src="dist/js/demo.js"></script>
+
+<script src="dist/js/pages/dashboard.js"></script>
+
+<script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+
 </html>
